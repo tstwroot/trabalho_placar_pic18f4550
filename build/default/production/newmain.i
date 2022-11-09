@@ -6005,6 +6005,7 @@ void lcd_cmd(unsigned char val);
 void lcd_dat(unsigned char val);
 void lcd_str(const char* str);
 void lcd_numb(const int str);
+char * name(const int str);
 # 17 "newmain.c" 2
 
 
@@ -6046,15 +6047,9 @@ main(void)
 
 
 
-                lcd_cmd(0x01);
-                lcd_cmd(0x80);
-
-                lcd_str("CASA: ");
                 lcd_cmd(0x86);
-                lcd_numb(casa);
+                lcd_str(name(casa));
 
-                lcd_cmd(0xC0);
-                lcd_str("VISITANTE: ");
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
             }else
@@ -6069,17 +6064,11 @@ main(void)
         {
             if(visitante != 9)
             {
-            visitante++;
+                visitante++;
 
-                lcd_cmd(0x01);
-                lcd_cmd(0x80);
-
-                lcd_str("CASA: ");
                 lcd_cmd(0x86);
                 lcd_numb(casa);
 
-                lcd_cmd(0xC0);
-                lcd_str("VISITANTE: ");
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
             }else

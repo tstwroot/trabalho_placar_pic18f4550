@@ -53,16 +53,10 @@ main(void)
                 casa++;
 //                *casa_ = casa+48;
 //                *visitante_ = visitante+48;
-                
-                lcd_cmd(L_CLR);
-                lcd_cmd(L_L1);
-                
-                lcd_str("CASA: ");
+                                
                 lcd_cmd(0x86);
-                lcd_numb(casa);
+                lcd_str(name(casa));
               
-                lcd_cmd(L_L2);
-                lcd_str("VISITANTE: "); 
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
             }else
@@ -77,17 +71,11 @@ main(void)
         {
             if(visitante != 9)
             {   
-            visitante++;
-                
-                lcd_cmd(L_CLR);
-                lcd_cmd(L_L1);
-                
-                lcd_str("CASA: ");
+                visitante++;
+                                
                 lcd_cmd(0x86);
                 lcd_numb(casa);
               
-                lcd_cmd(L_L2);
-                lcd_str("VISITANTE: "); 
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
             }else

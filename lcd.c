@@ -24,6 +24,7 @@
    ######################################################################## */
 
 #include <xc.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lcd.h"
@@ -89,6 +90,7 @@ void lcd_str(const char* str)
 void lcd_numb(const int str) {
     // exemplo de utilização da função sprintf
     char num_placar;
+
     if(0 == str){
             num_placar = "0";
         }
@@ -124,6 +126,47 @@ void lcd_numb(const int str) {
 }
 
 
+char *
+name(const int str)
+{
+    switch(str)
+    {
+        case 0 :
+            return '0';
+            break;
+        case 1:
+            return '1';
+        break;
+    
+        case 2 :
+            return '2';
+            break;
+    
+        case 3 :
+            return '3';
+            break;
+    
+        case 4 :
+            return '4';
+           break;
 
+        case 5 :
+            return '5';
+            break;
 
- 
+        case 6 :
+            return '6';
+            break;
+    
+        case 7 :
+            return '7';
+            break;
+        case 8 :
+            return '8';
+            break;
+            
+        case 9:
+            return '9';
+            break;
+    }
+}
