@@ -760,8 +760,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> 1 `i _str 378  ]
 {
 "96
-[; ;lcd.c: 96:             num_placar = "1";
-[e = _num_placar -> :s 2C `uc ]
+[; ;lcd.c: 96:             num_placar = '1';
+[e = _num_placar -> -> 49 `ui `uc ]
 "97
 [; ;lcd.c: 97:         }
 }
@@ -771,8 +771,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> 2 `i _str 379  ]
 {
 "99
-[; ;lcd.c: 99:             num_placar = "2";
-[e = _num_placar -> :s 3C `uc ]
+[; ;lcd.c: 99:             num_placar = '2';
+[e = _num_placar -> -> 50 `ui `uc ]
 "100
 [; ;lcd.c: 100:         }
 }
@@ -782,8 +782,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> 3 `i _str 380  ]
 {
 "102
-[; ;lcd.c: 102:             num_placar = "3";
-[e = _num_placar -> :s 4C `uc ]
+[; ;lcd.c: 102:             num_placar = '3';
+[e = _num_placar -> -> 51 `ui `uc ]
 "103
 [; ;lcd.c: 103:         }
 }
@@ -793,8 +793,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> 4 `i _str 381  ]
 {
 "105
-[; ;lcd.c: 105:             num_placar = "4";
-[e = _num_placar -> :s 5C `uc ]
+[; ;lcd.c: 105:             num_placar = '4';
+[e = _num_placar -> -> 52 `ui `uc ]
 "106
 [; ;lcd.c: 106:         }
 }
@@ -804,8 +804,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> 5 `i _str 382  ]
 {
 "108
-[; ;lcd.c: 108:             num_placar = "5";
-[e = _num_placar -> :s 6C `uc ]
+[; ;lcd.c: 108:             num_placar = '5';
+[e = _num_placar -> -> 53 `ui `uc ]
 "109
 [; ;lcd.c: 109:         }
 }
@@ -815,8 +815,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> 6 `i _str 383  ]
 {
 "111
-[; ;lcd.c: 111:             num_placar = "6";
-[e = _num_placar -> :s 7C `uc ]
+[; ;lcd.c: 111:             num_placar = '6';
+[e = _num_placar -> -> 54 `ui `uc ]
 "112
 [; ;lcd.c: 112:         }
 }
@@ -826,8 +826,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> 7 `i _str 384  ]
 {
 "114
-[; ;lcd.c: 114:             num_placar = "7";
-[e = _num_placar -> :s 8C `uc ]
+[; ;lcd.c: 114:             num_placar = '7';
+[e = _num_placar -> -> 55 `ui `uc ]
 "115
 [; ;lcd.c: 115:         }
 }
@@ -837,25 +837,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> 8 `i _str 385  ]
 {
 "117
-[; ;lcd.c: 117:             num_placar = "8";
-[e = _num_placar -> :s 9C `uc ]
+[; ;lcd.c: 117:             num_placar = '8';
+[e = _num_placar -> -> 56 `ui `uc ]
 "118
 [; ;lcd.c: 118:         }
 }
 [e :U 385 ]
-"119
-[; ;lcd.c: 119:     lcd_dat(num_placar);
-[e ( _lcd_dat (1 -> _num_placar `uc ]
 "120
-[; ;lcd.c: 120: }
+[; ;lcd.c: 120:     if(9 == str){
+[e $ ! == -> 9 `i _str 386  ]
+{
+"121
+[; ;lcd.c: 121:             num_placar = '9';
+[e = _num_placar -> -> 57 `ui `uc ]
+"122
+[; ;lcd.c: 122:         }
+}
+[e :U 386 ]
+"123
+[; ;lcd.c: 123:     lcd_dat(num_placar);
+[e ( _lcd_dat (1 -> _num_placar `uc ]
+"124
+[; ;lcd.c: 124: }
 [e :UE 376 ]
 }
-[a 9C 56 0 ]
-[a 8C 55 0 ]
-[a 7C 54 0 ]
-[a 6C 53 0 ]
-[a 5C 52 0 ]
-[a 4C 51 0 ]
-[a 3C 50 0 ]
-[a 2C 49 0 ]
 [a 1C 48 0 ]

@@ -5857,28 +5857,32 @@ void lcd_numb(const int str) {
             num_placar = "0";
         }
     if(1 == str){
-            num_placar = "1";
+            num_placar = '1';
         }
     if(2 == str){
-            num_placar = "2";
+            num_placar = '2';
         }
     if(3 == str){
-            num_placar = "3";
+            num_placar = '3';
         }
     if(4 == str){
-            num_placar = "4";
+            num_placar = '4';
         }
     if(5 == str){
-            num_placar = "5";
+            num_placar = '5';
         }
     if(6 == str){
-            num_placar = "6";
+            num_placar = '6';
         }
     if(7 == str){
-            num_placar = "7";
+            num_placar = '7';
         }
     if(8 == str){
-            num_placar = "8";
+            num_placar = '8';
+        }
+
+    if(9 == str){
+            num_placar = '9';
         }
     lcd_dat(num_placar);
 }

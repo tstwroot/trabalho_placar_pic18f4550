@@ -6024,13 +6024,19 @@ main(void)
     int casa = 0, visitante = 0;
 
 
-    char *casa_, *visitante_;
+
 
     lcd_init();
     lcd_cmd(0x01);
 
+        lcd_cmd(0x80);
+        lcd_str("CASA: ");
+        lcd_cmd(0xC0);
+        lcd_str("VISITANTE: ");
+
     while(1)
     {
+
 
         if(PORTBbits.RB1 == 0)
         {
@@ -6038,7 +6044,7 @@ main(void)
             {
                 casa++;
 
-                *visitante_ = visitante+48;
+
 
                 lcd_cmd(0x01);
                 lcd_cmd(0x80);
@@ -6047,10 +6053,10 @@ main(void)
                 lcd_cmd(0x86);
                 lcd_numb(casa);
 
-
-
-
-
+                lcd_cmd(0xC0);
+                lcd_str("VISITANTE: ");
+                lcd_cmd(0xcb);
+                lcd_numb(visitante);
             }else
             {
                 lcd_cmd(0x01);
@@ -6061,11 +6067,28 @@ main(void)
         }
         if(PORTBbits.RB2 == 0)
         {
-            lcd_str("apertei rb2 ");
-            lcd_cmd(0x01);
-# 95 "newmain.c"
-          }
+            if(visitante != 9)
+            {
+            visitante++;
 
+                lcd_cmd(0x01);
+                lcd_cmd(0x80);
+
+                lcd_str("CASA: ");
+                lcd_cmd(0x86);
+                lcd_numb(casa);
+
+                lcd_cmd(0xC0);
+                lcd_str("VISITANTE: ");
+                lcd_cmd(0xcb);
+                lcd_numb(visitante);
+            }else
+            {
+                lcd_cmd(0x01);
+                lcd_str("visitante vencedor");
+                exit(0);
+            }
+        }
 
     }
     return 0;
