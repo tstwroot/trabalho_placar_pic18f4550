@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <xc.h>
+#include <string.h>
 
 #include "config_4550.h"
 #include "display7s.h"
@@ -53,7 +54,6 @@ main(void)
                 lcd_str("CASA: ");
                 lcd_cmd(0x86);
                 lcd_numb(casa);
-                
 /*               
                 lcd_cmd(L_L2);
                 lcd_str("VISITANTE: "); 

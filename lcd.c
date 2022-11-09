@@ -79,7 +79,7 @@ void lcd_str(const char* str)
 {
  unsigned char i=0;
   
- while(str[i] != 0 )
+ while(str[i] != '\0' )
  {
    lcd_dat(str[i]);
    i++;
@@ -88,8 +88,35 @@ void lcd_str(const char* str)
 
 void lcd_numb(const int str) {
     // exemplo de utilização da função sprintf
-    
-    lcd_dat(str);  
+    char num_placar;
+    if(0 == str){
+            num_placar = "0";
+        }
+    if(1 == str){
+            num_placar = "1";
+        }
+    if(2 == str){
+            num_placar = "2";
+        }
+    if(3 == str){
+            num_placar = "3";
+        }
+    if(4 == str){
+            num_placar = "4";
+        }
+    if(5 == str){
+            num_placar = "5";
+        }
+    if(6 == str){
+            num_placar = "6";
+        }
+    if(7 == str){
+            num_placar = "7";
+        }
+    if(8 == str){
+            num_placar = "8";
+        }
+    lcd_dat(num_placar); 
 }
 
 

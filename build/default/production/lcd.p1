@@ -710,7 +710,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 "82
-[; ;lcd.c: 82:  while(str[i] != 0 )
+[; ;lcd.c: 82:  while(str[i] != '\0' )
 [e $U 373  ]
 [e :U 374 ]
 "83
@@ -727,8 +727,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 373 ]
 "82
-[; ;lcd.c: 82:  while(str[i] != 0 )
-[e $ != -> *U + _str * -> _i `ux -> -> # *U _str `ui `ux `i -> 0 `i 374  ]
+[; ;lcd.c: 82:  while(str[i] != '\0' )
+[e $ != -> *U + _str * -> _i `ux -> -> # *U _str `ui `ux `ui -> 0 `ui 374  ]
 [e :U 375 ]
 "87
 [; ;lcd.c: 87: }
@@ -741,10 +741,121 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _lcd_numb ]
 [v _str `Ci ~T0 @X0 1 r1 ]
 [f ]
+"91
+[; ;lcd.c: 91:     char num_placar;
+[v _num_placar `uc ~T0 @X0 1 a ]
 "92
-[; ;lcd.c: 92:     lcd_dat(str);
-[e ( _lcd_dat (1 -> _str `uc ]
+[; ;lcd.c: 92:     if(0 == str){
+[e $ ! == -> 0 `i _str 377  ]
+{
 "93
-[; ;lcd.c: 93: }
+[; ;lcd.c: 93:             num_placar = "0";
+[e = _num_placar -> :s 1C `uc ]
+"94
+[; ;lcd.c: 94:         }
+}
+[e :U 377 ]
+"95
+[; ;lcd.c: 95:     if(1 == str){
+[e $ ! == -> 1 `i _str 378  ]
+{
+"96
+[; ;lcd.c: 96:             num_placar = "1";
+[e = _num_placar -> :s 2C `uc ]
+"97
+[; ;lcd.c: 97:         }
+}
+[e :U 378 ]
+"98
+[; ;lcd.c: 98:     if(2 == str){
+[e $ ! == -> 2 `i _str 379  ]
+{
+"99
+[; ;lcd.c: 99:             num_placar = "2";
+[e = _num_placar -> :s 3C `uc ]
+"100
+[; ;lcd.c: 100:         }
+}
+[e :U 379 ]
+"101
+[; ;lcd.c: 101:     if(3 == str){
+[e $ ! == -> 3 `i _str 380  ]
+{
+"102
+[; ;lcd.c: 102:             num_placar = "3";
+[e = _num_placar -> :s 4C `uc ]
+"103
+[; ;lcd.c: 103:         }
+}
+[e :U 380 ]
+"104
+[; ;lcd.c: 104:     if(4 == str){
+[e $ ! == -> 4 `i _str 381  ]
+{
+"105
+[; ;lcd.c: 105:             num_placar = "4";
+[e = _num_placar -> :s 5C `uc ]
+"106
+[; ;lcd.c: 106:         }
+}
+[e :U 381 ]
+"107
+[; ;lcd.c: 107:     if(5 == str){
+[e $ ! == -> 5 `i _str 382  ]
+{
+"108
+[; ;lcd.c: 108:             num_placar = "5";
+[e = _num_placar -> :s 6C `uc ]
+"109
+[; ;lcd.c: 109:         }
+}
+[e :U 382 ]
+"110
+[; ;lcd.c: 110:     if(6 == str){
+[e $ ! == -> 6 `i _str 383  ]
+{
+"111
+[; ;lcd.c: 111:             num_placar = "6";
+[e = _num_placar -> :s 7C `uc ]
+"112
+[; ;lcd.c: 112:         }
+}
+[e :U 383 ]
+"113
+[; ;lcd.c: 113:     if(7 == str){
+[e $ ! == -> 7 `i _str 384  ]
+{
+"114
+[; ;lcd.c: 114:             num_placar = "7";
+[e = _num_placar -> :s 8C `uc ]
+"115
+[; ;lcd.c: 115:         }
+}
+[e :U 384 ]
+"116
+[; ;lcd.c: 116:     if(8 == str){
+[e $ ! == -> 8 `i _str 385  ]
+{
+"117
+[; ;lcd.c: 117:             num_placar = "8";
+[e = _num_placar -> :s 9C `uc ]
+"118
+[; ;lcd.c: 118:         }
+}
+[e :U 385 ]
+"119
+[; ;lcd.c: 119:     lcd_dat(num_placar);
+[e ( _lcd_dat (1 -> _num_placar `uc ]
+"120
+[; ;lcd.c: 120: }
 [e :UE 376 ]
 }
+[a 9C 56 0 ]
+[a 8C 55 0 ]
+[a 7C 54 0 ]
+[a 6C 53 0 ]
+[a 5C 52 0 ]
+[a 4C 51 0 ]
+[a 3C 50 0 ]
+[a 2C 49 0 ]
+[a 1C 48 0 ]

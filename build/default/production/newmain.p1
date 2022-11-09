@@ -645,89 +645,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 "99
 [p x EBTRB  =  OFF       ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"19 newmain.c
-[; ;newmain.c: 19: main(void)
+"20 newmain.c
+[; ;newmain.c: 20: main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"20
-[; ;newmain.c: 20: {
+"21
+[; ;newmain.c: 21: {
 {
 [e :U _main ]
 [f ]
-"21
-[; ;newmain.c: 21:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
 "22
-[; ;newmain.c: 22:     TRISB = 0x00;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;newmain.c: 22:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
 "23
-[; ;newmain.c: 23:     TRISE = 0x00;
+[; ;newmain.c: 23:     TRISB = 0x00;
+[e = _TRISB -> -> 0 `i `uc ]
+"24
+[; ;newmain.c: 24:     TRISE = 0x00;
 [e = _TRISE -> -> 0 `i `uc ]
-"25
-[; ;newmain.c: 25:     TRISBbits.TRISB1 = 1;
-[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
 "26
-[; ;newmain.c: 26:     TRISBbits.TRISB2 = 1;
+[; ;newmain.c: 26:     TRISBbits.TRISB1 = 1;
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+"27
+[; ;newmain.c: 27:     TRISBbits.TRISB2 = 1;
 [e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
-"31
-[; ;newmain.c: 31:     int casa = 0, visitante = 0;
+"32
+[; ;newmain.c: 32:     int casa = 0, visitante = 0;
 [v _casa `i ~T0 @X0 1 a ]
 [e = _casa -> 0 `i ]
 [v _visitante `i ~T0 @X0 1 a ]
 [e = _visitante -> 0 `i ]
-"34
-[; ;newmain.c: 34:     char *casa_, *visitante_;
+"35
+[; ;newmain.c: 35:     char *casa_, *visitante_;
 [v _casa_ `*uc ~T0 @X0 1 a ]
 [v _visitante_ `*uc ~T0 @X0 1 a ]
-"36
-[; ;newmain.c: 36:     lcd_init();
-[e ( _lcd_init ..  ]
 "37
-[; ;newmain.c: 37:     lcd_cmd(0x01);
+[; ;newmain.c: 37:     lcd_init();
+[e ( _lcd_init ..  ]
+"38
+[; ;newmain.c: 38:     lcd_cmd(0x01);
 [e ( _lcd_cmd (1 -> -> 1 `i `uc ]
-"39
-[; ;newmain.c: 39:     while(1)
-[e :U 371 ]
 "40
-[; ;newmain.c: 40:     {
+[; ;newmain.c: 40:     while(1)
+[e :U 372 ]
+"41
+[; ;newmain.c: 41:     {
 {
-"42
-[; ;newmain.c: 42:         if(PORTBbits.RB1 == 0)
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 373  ]
 "43
-[; ;newmain.c: 43:         {
-{
+[; ;newmain.c: 43:         if(PORTBbits.RB1 == 0)
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 374  ]
 "44
-[; ;newmain.c: 44:             if(casa != 9)
-[e $ ! != _casa -> 9 `i 374  ]
-"45
-[; ;newmain.c: 45:             {
+[; ;newmain.c: 44:         {
 {
+"45
+[; ;newmain.c: 45:             if(casa != 9)
+[e $ ! != _casa -> 9 `i 375  ]
 "46
-[; ;newmain.c: 46:                 casa++;
+[; ;newmain.c: 46:             {
+{
+"47
+[; ;newmain.c: 47:                 casa++;
 [e ++ _casa -> 1 `i ]
-"48
-[; ;newmain.c: 48:                 *visitante_ = visitante+48;
+"49
+[; ;newmain.c: 49:                 *visitante_ = visitante+48;
 [e = *U _visitante_ -> + _visitante -> 48 `i `uc ]
-"50
-[; ;newmain.c: 50:                 lcd_cmd(0x01);
-[e ( _lcd_cmd (1 -> -> 1 `i `uc ]
 "51
-[; ;newmain.c: 51:                 lcd_cmd(0x80);
+[; ;newmain.c: 51:                 lcd_cmd(0x01);
+[e ( _lcd_cmd (1 -> -> 1 `i `uc ]
+"52
+[; ;newmain.c: 52:                 lcd_cmd(0x80);
 [e ( _lcd_cmd (1 -> -> 128 `i `uc ]
-"53
-[; ;newmain.c: 53:                 lcd_str("CASA: ");
-[e ( _lcd_str (1 :s 1C ]
 "54
-[; ;newmain.c: 54:                 lcd_cmd(0x86);
-[e ( _lcd_cmd (1 -> -> 134 `i `uc ]
+[; ;newmain.c: 54:                 lcd_str("CASA: ");
+[e ( _lcd_str (1 :s 1C ]
 "55
-[; ;newmain.c: 55:                 lcd_numb(casa);
+[; ;newmain.c: 55:                 lcd_cmd(0x86);
+[e ( _lcd_cmd (1 -> -> 134 `i `uc ]
+"56
+[; ;newmain.c: 56:                 lcd_numb(casa);
 [e ( _lcd_numb (1 _casa ]
 "62
 [; ;newmain.c: 62:             }else
 }
-[e $U 375  ]
-[e :U 374 ]
+[e $U 376  ]
+[e :U 375 ]
 "63
 [; ;newmain.c: 63:             {
 {
@@ -743,14 +743,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "67
 [; ;newmain.c: 67:             }
 }
-[e :U 375 ]
+[e :U 376 ]
 "69
 [; ;newmain.c: 69:         }
 }
-[e :U 373 ]
+[e :U 374 ]
 "70
 [; ;newmain.c: 70:         if(PORTBbits.RB2 == 0)
-[e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 376  ]
+[e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 377  ]
 "71
 [; ;newmain.c: 71:         {
 {
@@ -763,20 +763,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "95
 [; ;newmain.c: 95:           }
 }
-[e :U 376 ]
+[e :U 377 ]
 "98
 [; ;newmain.c: 98:     }
 }
-[e :U 370 ]
-[e $U 371  ]
-[e :U 372 ]
+[e :U 371 ]
+[e $U 372  ]
+[e :U 373 ]
 "99
 [; ;newmain.c: 99:     return 0;
 [e ) -> 0 `i ]
-[e $UE 369  ]
+[e $UE 370  ]
 "100
 [; ;newmain.c: 100: }
-[e :UE 369 ]
+[e :UE 370 ]
 }
 [a 2C 99 97 115 97 32 118 101 110 99 101 100 111 114 0 ]
 [a 1C 67 65 83 65 58 32 0 ]
