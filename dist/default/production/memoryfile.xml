@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\PLACAR.X.production.hex">
+  <executable name="dist/default/production\trabalho_placar_pic18f4550.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>642</used>
-      <free>32126</free>
+      <used>646</used>
+      <free>32122</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
-      <used>82</used>
-      <free>1966</free>
+      <used>78</used>
+      <free>1970</free>
     </memory>
   </executable>
 </project>

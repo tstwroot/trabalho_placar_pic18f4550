@@ -44,3 +44,4 @@ void lcd_init(void);
 void lcd_cmd(unsigned char val); 
 void lcd_dat(unsigned char val);
 void lcd_str(const char* str);
+void lcd_numb(const int str);

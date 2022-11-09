@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PLACAR.X
+PROJECTNAME=trabalho_placar_pic18f4550
 
 # Active Configuration
 DEFAULTCONF=default

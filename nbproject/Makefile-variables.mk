@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=PLACAR.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/PLACAR.X.production.hex
+CND_ARTIFACT_NAME_default=trabalho_placar_pic18f4550.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/trabalho_placar_pic18f4550.production.hex

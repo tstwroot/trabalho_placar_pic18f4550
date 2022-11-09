@@ -24,6 +24,8 @@
    ######################################################################## */
 
 #include <xc.h>
+#include <stdlib.h>
+#include <string.h>
 #include "lcd.h"
 #include "atraso.h"
 
@@ -82,6 +84,12 @@ void lcd_str(const char* str)
    lcd_dat(str[i]);
    i++;
  }  
+}
+
+void lcd_numb(const int str) {
+    // exemplo de utilização da função sprintf
+    
+    lcd_dat(str);  
 }
 
 
