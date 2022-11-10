@@ -6,16 +6,16 @@
  * Created on 9 de Novembro de 2022, 08:47
  */
 
-#include <stdbool.h>
+#include <xc.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <xc.h>
 #include <string.h>
 
 #include "config_4550.h"
 #include "display7s.h"
 #include "atraso.h"
 #include "lcd.h"
+#define TRUE 1
 
 int
 main(void) 
@@ -28,10 +28,10 @@ main(void)
     TRISBbits.TRISB2 = 1;
     TRISBbits.TRISB3 = 1;
 
-   
     PORTBbits.RB7 = 1;
         
-    int casa = 0x00, visitante = 0x00;
+    int casa = 0x00;
+    int visitante = 0x00;
     
     PORTBbits.RB7 = 0x00;
     PORTBbits.RB4 = 0x00;
@@ -53,10 +53,9 @@ main(void)
     lcd_cmd(0xcb);
     lcd_numb(visitante);
               
-    while(true)
+    while(TRUE)
     {
         LATD = 0x00;
-        
         if(PORTBbits.RB1 == 0)
         {
             if(casa < 9)
@@ -72,8 +71,11 @@ main(void)
             }
             else
             {
-                lcd_cmd(L_CLR);                
-                lcd_str("CASA VENCEU"); 
+                lcd_cmd(L_CLR);       
+                lcd_cmd(L_L1);
+                lcd_str("CASA"); 
+                lcd_cmd(L_L2);
+                lcd_str("VENCEDOR!!!"); 
                 break;
             }    
         }
@@ -92,8 +94,11 @@ main(void)
             }
             else
             {
-                lcd_cmd(L_CLR);                
-                lcd_str("VISITANTE VENCEU"); 
+                lcd_cmd(L_CLR);       
+                lcd_cmd(L_L1);
+                lcd_str("VISITANTE"); 
+                lcd_cmd(L_L2);
+                lcd_str("VENCEDOR!!!"); 
                 break;
             }
         }
