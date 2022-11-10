@@ -24,19 +24,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3658
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 3658: extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
 [v _TRISBbits `VS149 ~T0 @X0 0 e@3987 ]
-"43 ./lcd.h
-[; ;./lcd.h: 43: void lcd_init(void);
-[v _lcd_init `(v ~T0 @X0 0 ef ]
-"44
-[; ;./lcd.h: 44: void lcd_cmd(unsigned char val);
-[v _lcd_cmd `(v ~T0 @X0 0 ef1`uc ]
-"46
-[; ;./lcd.h: 46: void lcd_str(const char* str);
-[v _lcd_str `(v ~T0 @X0 0 ef1`*Cuc ]
-"47
-[; ;./lcd.h: 47: void lcd_numb(const int str);
-[v _lcd_numb `(v ~T0 @X0 0 ef1`Ci ]
-"2460 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+"2460
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2460:     struct {
 [s S109 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S109 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
@@ -55,6 +43,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2484
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2484: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
 [v _PORTBbits `VS108 ~T0 @X0 0 e@3969 ]
+"43 ./lcd.h
+[; ;./lcd.h: 43: void lcd_init(void);
+[v _lcd_init `(v ~T0 @X0 0 ef ]
+"44
+[; ;./lcd.h: 44: void lcd_cmd(unsigned char val);
+[v _lcd_cmd `(v ~T0 @X0 0 ef1`uc ]
+"46
+[; ;./lcd.h: 46: void lcd_str(const char* str);
+[v _lcd_str `(v ~T0 @X0 0 ef1`*Cuc ]
+"47
+[; ;./lcd.h: 47: void lcd_numb(const int str);
+[v _lcd_numb `(v ~T0 @X0 0 ef1`Ci ]
+"3264 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 3264: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"26 ./atraso.h
+[; ;./atraso.h: 26: void atraso_ms(unsigned int valor);
+[v _atraso_ms `(v ~T0 @X0 0 ef1`ui ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 55: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -665,35 +671,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27
 [; ;newmain.c: 27:     TRISBbits.TRISB2 = 1;
 [e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
-"32
-[; ;newmain.c: 32:     int casa = 0x00, visitante = 0x00;
+"28
+[; ;newmain.c: 28:     TRISBbits.TRISB3 = 1;
+[e = . . _TRISBbits 0 3 -> -> 1 `i `uc ]
+"31
+[; ;newmain.c: 31:     PORTBbits.RB7 = 1;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+"33
+[; ;newmain.c: 33:     int casa = 0x00, visitante = 0x00;
 [v _casa `i ~T0 @X0 1 a ]
 [e = _casa -> 0 `i ]
 [v _visitante `i ~T0 @X0 1 a ]
 [e = _visitante -> 0 `i ]
-"37
-[; ;newmain.c: 37:     lcd_init();
+"35
+[; ;newmain.c: 35:     lcd_init();
 [e ( _lcd_init ..  ]
-"38
-[; ;newmain.c: 38:     lcd_cmd(0x01);
+"36
+[; ;newmain.c: 36:     lcd_cmd(0x01);
 [e ( _lcd_cmd (1 -> -> 1 `i `uc ]
-"40
-[; ;newmain.c: 40:     lcd_cmd(0x80);
+"38
+[; ;newmain.c: 38:     lcd_cmd(0x80);
 [e ( _lcd_cmd (1 -> -> 128 `i `uc ]
-"41
-[; ;newmain.c: 41:     lcd_str("CASA: ");
+"39
+[; ;newmain.c: 39:     lcd_str("CASA: ");
 [e ( _lcd_str (1 :s 1C ]
-"42
-[; ;newmain.c: 42:     lcd_cmd(0x86);
+"41
+[; ;newmain.c: 41:     lcd_cmd(0x86);
 [e ( _lcd_cmd (1 -> -> 134 `i `uc ]
-"43
-[; ;newmain.c: 43:     lcd_numb(casa);
+"42
+[; ;newmain.c: 42:     lcd_numb(casa);
 [e ( _lcd_numb (1 _casa ]
-"45
-[; ;newmain.c: 45:     lcd_cmd(0xC0);
+"44
+[; ;newmain.c: 44:     lcd_cmd(0xC0);
 [e ( _lcd_cmd (1 -> -> 192 `i `uc ]
-"46
-[; ;newmain.c: 46:     lcd_str("VISITANTE: ");
+"45
+[; ;newmain.c: 45:     lcd_str("VISITANTE: ");
 [e ( _lcd_str (1 :s 2C ]
 "47
 [; ;newmain.c: 47:     lcd_cmd(0xcb);
@@ -708,128 +720,169 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;newmain.c: 51:     {
 {
 "52
-[; ;newmain.c: 52:         if(PORTBbits.RB1 == 0)
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 374  ]
+[; ;newmain.c: 52:         LATD = 0x00;
+[e = _LATD -> -> 0 `i `uc ]
 "53
-[; ;newmain.c: 53:         {
-{
+[; ;newmain.c: 53:         if(PORTBbits.RB1 == 0)
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 374  ]
 "54
-[; ;newmain.c: 54:             if(casa != 9)
-[e $ ! != _casa -> 9 `i 375  ]
-"55
-[; ;newmain.c: 55:             {
+[; ;newmain.c: 54:         {
 {
+"55
+[; ;newmain.c: 55:             if(casa < 9)
+[e $ ! < _casa -> 9 `i 375  ]
 "56
-[; ;newmain.c: 56:                 casa++;
-[e ++ _casa -> 1 `i ]
+[; ;newmain.c: 56:             {
+{
 "57
-[; ;newmain.c: 57:                 lcd_cmd(0x86);
-[e ( _lcd_cmd (1 -> -> 134 `i `uc ]
+[; ;newmain.c: 57:                 casa++;
+[e ++ _casa -> 1 `i ]
 "58
-[; ;newmain.c: 58:                 lcd_numb(casa);
+[; ;newmain.c: 58:                 lcd_cmd(0x86);
+[e ( _lcd_cmd (1 -> -> 134 `i `uc ]
+"59
+[; ;newmain.c: 59:                 lcd_numb(casa);
 [e ( _lcd_numb (1 _casa ]
-"60
-[; ;newmain.c: 60:                 lcd_cmd(0xcb);
-[e ( _lcd_cmd (1 -> -> 203 `i `uc ]
 "61
-[; ;newmain.c: 61:                 lcd_numb(visitante);
-[e ( _lcd_numb (1 _visitante ]
+[; ;newmain.c: 61:                 lcd_cmd(0xcb);
+[e ( _lcd_cmd (1 -> -> 203 `i `uc ]
 "62
-[; ;newmain.c: 62:             }
+[; ;newmain.c: 62:                 lcd_numb(visitante);
+[e ( _lcd_numb (1 _visitante ]
+"63
+[; ;newmain.c: 63:                 PORTBbits.RB7 = 0x33;
+[e = . . _PORTBbits 0 7 -> -> 51 `i `uc ]
+"64
+[; ;newmain.c: 64:                 PORTBbits.RB4 = 0x00;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+"66
+[; ;newmain.c: 66:             }
 }
 [e $U 376  ]
-"63
-[; ;newmain.c: 63:             else
-[e :U 375 ]
-"64
-[; ;newmain.c: 64:             {
-{
-"65
-[; ;newmain.c: 65:                 lcd_cmd(0x01);
-[e ( _lcd_cmd (1 -> -> 1 `i `uc ]
-"66
-[; ;newmain.c: 66:                 lcd_str("CASA VENCEU");
-[e ( _lcd_str (1 :s 3C ]
 "67
-[; ;newmain.c: 67:                 break;
-[e $U 373  ]
+[; ;newmain.c: 67:             else
+[e :U 375 ]
 "68
-[; ;newmain.c: 68:             }
+[; ;newmain.c: 68:             {
+{
+"69
+[; ;newmain.c: 69:                 lcd_cmd(0x01);
+[e ( _lcd_cmd (1 -> -> 1 `i `uc ]
+"70
+[; ;newmain.c: 70:                 lcd_str("CASA VENCEU");
+[e ( _lcd_str (1 :s 3C ]
+"71
+[; ;newmain.c: 71:                 break;
+[e $U 373  ]
+"72
+[; ;newmain.c: 72:             }
 }
 [e :U 376 ]
-"69
-[; ;newmain.c: 69:         }
+"73
+[; ;newmain.c: 73:         }
 }
 [e :U 374 ]
-"70
-[; ;newmain.c: 70:         if(PORTBbits.RB2 == 0)
-[e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 377  ]
-"71
-[; ;newmain.c: 71:         {
-{
-"72
-[; ;newmain.c: 72:             if(visitante != 9)
-[e $ ! != _visitante -> 9 `i 378  ]
-"73
-[; ;newmain.c: 73:             {
-{
 "74
-[; ;newmain.c: 74:                 visitante++;
-[e ++ _visitante -> 1 `i ]
+[; ;newmain.c: 74:         if(PORTBbits.RB2 == 0)
+[e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 377  ]
 "75
-[; ;newmain.c: 75:                 lcd_cmd(0x86);
-[e ( _lcd_cmd (1 -> -> 134 `i `uc ]
+[; ;newmain.c: 75:         {
+{
 "76
-[; ;newmain.c: 76:                 lcd_numb(casa);
-[e ( _lcd_numb (1 _casa ]
+[; ;newmain.c: 76:             if(visitante < 9)
+[e $ ! < _visitante -> 9 `i 378  ]
+"77
+[; ;newmain.c: 77:             {
+{
 "78
-[; ;newmain.c: 78:                 lcd_cmd(0xcb);
-[e ( _lcd_cmd (1 -> -> 203 `i `uc ]
+[; ;newmain.c: 78:                 visitante++;
+[e ++ _visitante -> 1 `i ]
 "79
-[; ;newmain.c: 79:                 lcd_numb(visitante);
-[e ( _lcd_numb (1 _visitante ]
+[; ;newmain.c: 79:                 lcd_cmd(0x86);
+[e ( _lcd_cmd (1 -> -> 134 `i `uc ]
 "80
-[; ;newmain.c: 80:             }
+[; ;newmain.c: 80:                 lcd_numb(casa);
+[e ( _lcd_numb (1 _casa ]
+"82
+[; ;newmain.c: 82:                 lcd_cmd(0xcb);
+[e ( _lcd_cmd (1 -> -> 203 `i `uc ]
+"83
+[; ;newmain.c: 83:                 lcd_numb(visitante);
+[e ( _lcd_numb (1 _visitante ]
+"84
+[; ;newmain.c: 84:                 PORTBbits.RB4 = 0x33;
+[e = . . _PORTBbits 0 4 -> -> 51 `i `uc ]
+"85
+[; ;newmain.c: 85:                 PORTBbits.RB7 = 0x00;
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"87
+[; ;newmain.c: 87:             }
 }
 [e $U 379  ]
-"81
-[; ;newmain.c: 81:             else
+"88
+[; ;newmain.c: 88:             else
 [e :U 378 ]
-"82
-[; ;newmain.c: 82:             {
+"89
+[; ;newmain.c: 89:             {
 {
-"83
-[; ;newmain.c: 83:                 lcd_cmd(0x01);
+"90
+[; ;newmain.c: 90:                 lcd_cmd(0x01);
 [e ( _lcd_cmd (1 -> -> 1 `i `uc ]
-"84
-[; ;newmain.c: 84:                 lcd_str("VISITANTE VENCEU");
+"91
+[; ;newmain.c: 91:                 lcd_str("VISITANTE VENCEU");
 [e ( _lcd_str (1 :s 4C ]
-"85
-[; ;newmain.c: 85:                 break;
+"92
+[; ;newmain.c: 92:                 break;
 [e $U 373  ]
-"86
-[; ;newmain.c: 86:             }
+"93
+[; ;newmain.c: 93:             }
 }
 [e :U 379 ]
-"87
-[; ;newmain.c: 87:         }
+"94
+[; ;newmain.c: 94:         }
 }
 [e :U 377 ]
-"88
-[; ;newmain.c: 88:     }
+"95
+[; ;newmain.c: 95:         if (PORTBbits.RB3 == 0)
+[e $ ! == -> . . _PORTBbits 0 3 `i -> 0 `i 380  ]
+"96
+[; ;newmain.c: 96:         {
+{
+"97
+[; ;newmain.c: 97:             lcd_cmd(0x01);
+[e ( _lcd_cmd (1 -> -> 1 `i `uc ]
+"98
+[; ;newmain.c: 98:             lcd_str("RESET");
+[e ( _lcd_str (1 :s 5C ]
+"99
+[; ;newmain.c: 99:             atraso_ms(100);
+[e ( _atraso_ms (1 -> -> 100 `i `ui ]
+"100
+[; ;newmain.c: 100:             lcd_cmd(0x01);
+[e ( _lcd_cmd (1 -> -> 1 `i `uc ]
+"101
+[; ;newmain.c: 101:             break;
+[e $U 373  ]
+"102
+[; ;newmain.c: 102:         }
+}
+[e :U 380 ]
+"103
+[; ;newmain.c: 103:     }
 }
 [e :U 371 ]
 [e $U 372  ]
 [e :U 373 ]
-"89
-[; ;newmain.c: 89:     return 0;
+"104
+[; ;newmain.c: 104:     return 0;
 [e ) -> 0 `i ]
 [e $UE 370  ]
-"90
-[; ;newmain.c: 90: }
+"105
+[; ;newmain.c: 105: }
 [e :UE 370 ]
 }
 [a 4C 86 73 83 73 84 65 78 84 69 32 86 69 78 67 69 85 0 ]
 [a 3C 67 65 83 65 32 86 69 78 67 69 85 0 ]
+[a 5C 82 69 83 69 84 0 ]
 [a 2C 86 73 83 73 84 65 78 84 69 58 32 0 ]
 [a 1C 67 65 83 65 58 32 0 ]

@@ -53,7 +53,7 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "2484 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[s S181 . 1 `uc 1 INT0 1 0 :1:0 
+[s S177 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -61,11 +61,11 @@
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S189 . 1 `uc 1 . 1 0 :3:0 
+[s S185 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S192 . 1 `S137 1 . 1 0 `S181 1 . 1 0 `S189 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES192  1 e 1 @3969 ]
+[u S188 . 1 `S137 1 . 1 0 `S177 1 . 1 0 `S185 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES188  1 e 1 @3969 ]
 "2706
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 [s S34 . 1 `uc 1 RE0 1 0 :1:0 
@@ -101,6 +101,8 @@
 ]
 [u S64 . 1 `S34 1 . 1 0 `S41 1 . 1 0 `S45 1 . 1 0 `S52 1 . 1 0 `S59 1 . 1 0 ]
 [v _PORTEbits PORTEbits `VES64  1 e 1 @3972 ]
+"3264
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3626
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 [s S128 . 1 `uc 1 TRISB0 1 0 :1:0 
@@ -122,10 +124,10 @@
 "20 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\newmain.c
 [v _main main `(i  1 e 2 0 ]
 {
-"32
+"33
 [v main@visitante visitante `i  1 a 2 13 ]
 [v main@casa casa `i  1 a 2 11 ]
-"90
+"105
 } 0
 "79 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\lcd.c
 [v _lcd_str lcd_str `(v  1 e 1 0 ]
