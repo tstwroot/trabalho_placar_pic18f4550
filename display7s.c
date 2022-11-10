@@ -68,6 +68,8 @@ unsigned char display7s(unsigned char v)
       return 0x79;
     case 15:
       return 0x71;
+      case 16:
+          return 0x73;
     default:
       return 0;
   }

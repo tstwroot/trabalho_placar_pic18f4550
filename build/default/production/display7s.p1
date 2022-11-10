@@ -131,14 +131,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ) -> -> 113 `i `uc ]
 [e $UE 1  ]
 "71
-[; ;display7s.c: 71:     default:
+[; ;display7s.c: 71:       case 16:
 [e :U 20 ]
 "72
-[; ;display7s.c: 72:       return 0;
-[e ) -> -> 0 `i `uc ]
+[; ;display7s.c: 72:           return 0x73;
+[e ) -> -> 115 `i `uc ]
 [e $UE 1  ]
 "73
-[; ;display7s.c: 73:   }
+[; ;display7s.c: 73:     default:
+[e :U 21 ]
+"74
+[; ;display7s.c: 74:       return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 1  ]
+"75
+[; ;display7s.c: 75:   }
 }
 [e $U 2  ]
 [e :U 3 ]
@@ -158,9 +165,10 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 13 `i 17
  , $ -> 14 `i 18
  , $ -> 15 `i 19
- 20 ]
+ , $ -> 16 `i 20
+ 21 ]
 [e :U 2 ]
-"75
-[; ;display7s.c: 75: }
+"77
+[; ;display7s.c: 77: }
 [e :UE 1 ]
 }

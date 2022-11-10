@@ -6,16 +6,16 @@
  * Created on 9 de Novembro de 2022, 08:47
  */
 
-#include <xc.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <xc.h>
 #include <string.h>
 
 #include "config_4550.h"
 #include "display7s.h"
 #include "atraso.h"
 #include "lcd.h"
-#define TRUE 1
 
 int
 main(void) 
@@ -28,10 +28,10 @@ main(void)
     TRISBbits.TRISB2 = 1;
     TRISBbits.TRISB3 = 1;
 
+   
     PORTBbits.RB7 = 1;
         
-    int casa = 0x00;
-    int visitante = 0x00;
+    int casa = 0x00, visitante = 0x00;
     
     PORTBbits.RB7 = 0x00;
     PORTBbits.RB4 = 0x00;
@@ -44,7 +44,7 @@ main(void)
     lcd_cmd(L_L1);
     lcd_str("CASA: ");
     
-    lcd_cmd(0x86);
+    lcd_cmd(0x8b);
     lcd_numb(casa);
     
     lcd_cmd(L_L2);
@@ -53,29 +53,29 @@ main(void)
     lcd_cmd(0xcb);
     lcd_numb(visitante);
               
-    while(TRUE)
+    while(true)
     {
         LATD = 0x00;
+        
         if(PORTBbits.RB1 == 0)
         {
             if(casa < 9)
             {   
                 casa++;
-                lcd_cmd(0x86);
+                lcd_cmd(0x8b);
                 lcd_numb(casa);
                 
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
-                PORTBbits.RB7 = 0x00;
+                PORTBbits.RB7 = 0b01110011;
                 PORTBbits.RB4 = 0x00;
+                PORTD = display7s(16);	 
+                atraso_ms(20);	
             }
             else
             {
-                lcd_cmd(L_CLR);       
-                lcd_cmd(L_L1);
-                lcd_str("CASA"); 
-                lcd_cmd(L_L2);
-                lcd_str("VENCEDOR!!!"); 
+                lcd_cmd(L_CLR);                
+                lcd_str("CASA VENCEU"); 
                 break;
             }    
         }
@@ -84,21 +84,20 @@ main(void)
             if(visitante < 9)
             {   
                 visitante++;         
-                lcd_cmd(0x86);
+                lcd_cmd(0x8b);
                 lcd_numb(casa);
               
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
                 PORTBbits.RB4 = 0b01110011;
                 PORTBbits.RB7 = 0x00;
+                PORTD = display7s(16);	 
+                atraso_ms(20);	
             }
             else
             {
-                lcd_cmd(L_CLR);       
-                lcd_cmd(L_L1);
-                lcd_str("VISITANTE"); 
-                lcd_cmd(L_L2);
-                lcd_str("VENCEDOR!!!"); 
+                lcd_cmd(L_CLR);                
+                lcd_str("VISITANTE VENCEU"); 
                 break;
             }
         }
