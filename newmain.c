@@ -1,7 +1,8 @@
 /*
  * File:   newmain.c
- * Author: VINICIUS
- *
+ * Author:  VINICIUS
+ *          GABRIELA
+ *          PABLO
  * Created on 9 de Novembro de 2022, 08:47
  */
 
@@ -32,6 +33,11 @@ main(void)
         
     int casa = 0x00, visitante = 0x00;
     
+    PORTBbits.RB7 = 0x00;
+    PORTBbits.RB4 = 0x00;
+    
+    LATD = 0x00;
+    
     lcd_init();
     lcd_cmd(L_CLR);
     
@@ -50,6 +56,7 @@ main(void)
     while(true)
     {
         LATD = 0x00;
+        
         if(PORTBbits.RB1 == 0)
         {
             if(casa < 9)
@@ -60,9 +67,8 @@ main(void)
                 
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
-                PORTBbits.RB7 = 0x33;
+                PORTBbits.RB7 = 0x00;
                 PORTBbits.RB4 = 0x00;
-
             }
             else
             {
@@ -81,9 +87,8 @@ main(void)
               
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
-                PORTBbits.RB4 = 0x33;
+                PORTBbits.RB4 = 0b01110011;
                 PORTBbits.RB7 = 0x00;
-
             }
             else
             {
