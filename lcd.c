@@ -91,46 +91,41 @@ void lcd_numb(const int str) {
     // exemplo de utilização da função sprintf
     char num_placar;
 
-    if(0 == str)
-    {
-        num_placar = '0';
-    }
-    if(1 == str)
-    {
-        num_placar = '1';
-    }
-    if(2 == str)
-    {
-        num_placar = '2';
-    }
-    if(3 == str)
-    {
-        num_placar = '3';
-    }
-    if(4 == str)
-    {
-        num_placar = '4';
-    }
-    if(5 == str)
-    {
-        num_placar = '5';
-    }
-    if(6 == str)
-    {
-        num_placar = '6';
-    }
-    if(7 == str)
-    {
-        num_placar = '7';
-    }
-    if(8 == str)
-    {
-        num_placar = '8';
+    switch(str){
+        case 0:
+            num_placar = '0';
+        break;
+        case 1:
+            num_placar = '1';
+        break;
+         case 2:
+            num_placar = '2';
+        break;
+         case 3:
+            num_placar = '3';
+        break;
+         case 4:
+            num_placar = '4';
+        break;
+         case 5:
+            num_placar = '5';
+        break;
+         case 6:
+            num_placar = '6';
+        break;
+         case 7:
+            num_placar = '7';
+        break;
+         case 8:
+            num_placar = '8';
+        break;
+         case 9:
+            num_placar = '9';
+        break;
+ 
+        default:
+            break;
     }
     
-    if(9 == str)
-    {
-        num_placar = '9';
-    }
     lcd_dat(num_placar); 
 }

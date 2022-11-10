@@ -10,12 +10,12 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\trabalho_placar_pic18f4550.production.hex)
-  800h - D5Bh		(dist/default/production\trabalho_placar_pic18f4550.production.hex)
+  800h - D71h		(dist/default/production\trabalho_placar_pic18f4550.production.hex)
   200000h - 200007h		(dist/default/production\trabalho_placar_pic18f4550.production.hex)
   300000h - 30000Dh		(dist/default/production\trabalho_placar_pic18f4550.production.hex)
  Unused ranges:
   4h - 7FFh
-  D5Ch - 1FFFFFh
+  D72h - 1FFFFFh
   200008h - 2FFFFFh
 
 ### Hex Memory Map ###
@@ -112,7 +112,9 @@
 00000D20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000D30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000D40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000D50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+00000D50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000D60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000D70 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------

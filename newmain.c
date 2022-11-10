@@ -27,6 +27,7 @@ main(void)
     TRISBbits.TRISB1 = 1;
     TRISBbits.TRISB2 = 1;
     TRISBbits.TRISB3 = 1;
+    TRISBbits.TRISB0 = 1;
 
    
     PORTBbits.RB7 = 1;
@@ -56,6 +57,8 @@ main(void)
     while(true)
     {
         LATD = 0x00;
+        PORTBbits.RB4 = 0x00;
+        PORTBbits.RB7 = 0x00;
         
         if(PORTBbits.RB1 == 0)
         {
@@ -70,12 +73,15 @@ main(void)
                 PORTBbits.RB7 = 0b01110011;
                 PORTBbits.RB4 = 0x00;
                 PORTD = display7s(16);	 
-                atraso_ms(20);	
+                atraso_ms(25);	
             }
             else
             {
-                lcd_cmd(L_CLR);                
-                lcd_str("CASA VENCEU"); 
+                lcd_cmd(L_CLR);       
+                lcd_cmd(L_L1);
+                lcd_str("CASA"); 
+                lcd_cmd(L_L2);
+                lcd_str("VENCEDOR!!!"); 
                 break;
             }    
         }
@@ -92,16 +98,19 @@ main(void)
                 PORTBbits.RB4 = 0b01110011;
                 PORTBbits.RB7 = 0x00;
                 PORTD = display7s(16);	 
-                atraso_ms(20);	
+                atraso_ms(25);	
             }
             else
             {
-                lcd_cmd(L_CLR);                
-                lcd_str("VISITANTE VENCEU"); 
+                lcd_cmd(L_CLR);       
+                lcd_cmd(L_L1);
+                lcd_str("VISITANTE"); 
+                lcd_cmd(L_L2);
+                lcd_str("VENCEDOR!!!"); 
                 break;
             }
         }
-        if (PORTBbits.RB3 == 0)
+        if (PORTBbits.RB3 == 0 || PORTBbits.RB0 == 0)
         {            
             lcd_cmd(L_CLR);
             lcd_str("RESET");

@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"26 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\atraso.c
+"26 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\atraso.c
 [v _atraso_ms atraso_ms `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -29,9 +29,9 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"35 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\display7s.c
+"35 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\display7s.c
 [v _display7s display7s `(uc  1 e 1 0 ]
-"33 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\lcd.c
+"33 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\lcd.c
 [v _lcd_wr lcd_wr `(v  1 e 1 0 ]
 "38
 [v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
@@ -43,7 +43,7 @@
 [v _lcd_str lcd_str `(v  1 e 1 0 ]
 "90
 [v _lcd_numb lcd_numb `(v  1 e 1 0 ]
-"21 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\newmain.c
+"21 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\newmain.c
 [v _main main `(i  1 e 2 0 ]
 [s S137 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
@@ -54,7 +54,7 @@
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-"2484 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+"2484 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [s S177 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
@@ -123,15 +123,15 @@
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4224
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-"21 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\newmain.c
+"21 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\newmain.c
 [v _main main `(i  1 e 2 0 ]
 {
-"34
+"35
 [v main@visitante visitante `i  1 a 2 13 ]
 [v main@casa casa `i  1 a 2 11 ]
-"114
+"123
 } 0
-"79 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\lcd.c
+"79 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\lcd.c
 [v _lcd_str lcd_str `(v  1 e 1 0 ]
 {
 "81
@@ -144,10 +144,10 @@
 [v _lcd_numb lcd_numb `(v  1 e 1 0 ]
 {
 "92
-[v lcd_numb@num_placar num_placar `uc  1 a 1 8 ]
+[v lcd_numb@num_placar num_placar `uc  1 a 1 10 ]
 "90
 [v lcd_numb@str str `Ci  1 p 2 6 ]
-"136
+"131
 } 0
 "49
 [v _lcd_dat lcd_dat `(v  1 e 1 0 ]
@@ -181,7 +181,7 @@
 [v lcd_wr@val val `uc  1 a 1 0 ]
 "36
 } 0
-"26 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\atraso.c
+"26 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\atraso.c
 [v _atraso_ms atraso_ms `(v  1 e 1 0 ]
 {
 "28
@@ -192,7 +192,7 @@
 [v atraso_ms@valor valor `ui  1 p 2 0 ]
 "43
 } 0
-"35 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\display7s.c
+"35 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\display7s.c
 [v _display7s display7s `(uc  1 e 1 0 ]
 {
 [v display7s@v v `uc  1 a 1 wreg ]
