@@ -3,14 +3,8 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"26 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\atraso.c
+"26 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\atraso.c
 [v _atraso_ms atraso_ms `(v  1 e 1 0 ]
-"3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\_Exit.c
-[v __Exit _Exit `(v  1 e 1 0 ]
-"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\atexit.c
-[v ___funcs_on_exit __funcs_on_exit `(v  1 e 1 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\exit.c
-[v _exit exit `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
@@ -35,7 +29,7 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"33 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\lcd.c
+"33 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\lcd.c
 [v _lcd_wr lcd_wr `(v  1 e 1 0 ]
 "38
 [v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
@@ -47,11 +41,9 @@
 [v _lcd_str lcd_str `(v  1 e 1 0 ]
 "90
 [v _lcd_numb lcd_numb `(v  1 e 1 0 ]
-"130
-[v _name name `(*.39uc  1 e 2 0 ]
-"20 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\newmain.c
+"20 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\newmain.c
 [v _main main `(i  1 e 2 0 ]
-[s S145 . 1 `uc 1 RB0 1 0 :1:0 
+[s S137 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -60,8 +52,8 @@
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-"2484 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[s S188 . 1 `uc 1 INT0 1 0 :1:0 
+"2484 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[s S181 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -69,11 +61,11 @@
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S196 . 1 `uc 1 . 1 0 :3:0 
+[s S189 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S199 . 1 `S145 1 . 1 0 `S188 1 . 1 0 `S196 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES199  1 e 1 @3969 ]
+[u S192 . 1 `S137 1 . 1 0 `S181 1 . 1 0 `S189 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES192  1 e 1 @3969 ]
 "2706
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 [s S34 . 1 `uc 1 RE0 1 0 :1:0 
@@ -111,7 +103,7 @@
 [v _PORTEbits PORTEbits `VES64  1 e 1 @3972 ]
 "3626
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S136 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S128 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -121,37 +113,27 @@
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "3658
-[u S154 . 1 `S136 1 . 1 0 `S145 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES154  1 e 1 @3987 ]
+[u S146 . 1 `S128 1 . 1 0 `S137 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES146  1 e 1 @3987 ]
 "4002
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4224
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-"6 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\atexit.c
-[v _funcs funcs `[32]*.37(v  1 s 64 funcs ]
-"7
-[v _count count `c  1 s 1 count ]
-"20 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\newmain.c
+"20 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\newmain.c
 [v _main main `(i  1 e 2 0 ]
 {
 "32
 [v main@visitante visitante `i  1 a 2 13 ]
 [v main@casa casa `i  1 a 2 11 ]
-"91
+"90
 } 0
-"130 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\lcd.c
-[v _name name `(*.39uc  1 e 2 0 ]
-{
-[v name@str str `Ci  1 p 2 0 ]
-"172
-} 0
-"79
+"79 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\lcd.c
 [v _lcd_str lcd_str `(v  1 e 1 0 ]
 {
 "81
 [v lcd_str@i i `uc  1 a 1 10 ]
 "79
-[v lcd_str@str str `*.35Cuc  1 p 2 6 ]
+[v lcd_str@str str `*.25Cuc  1 p 2 6 ]
 "88
 } 0
 "90
@@ -161,7 +143,7 @@
 [v lcd_numb@num_placar num_placar `uc  1 a 1 8 ]
 "90
 [v lcd_numb@str str `Ci  1 p 2 6 ]
-"126
+"136
 } 0
 "49
 [v _lcd_dat lcd_dat `(v  1 e 1 0 ]
@@ -195,7 +177,7 @@
 [v lcd_wr@val val `uc  1 a 1 0 ]
 "36
 } 0
-"26 C:\Users\mira\Desktop\placar\trabalho_placar_pic18f4550\atraso.c
+"26 C:\Users\VINICIUS\Documents\Micro\trabalho_placar_pic18f4550\atraso.c
 [v _atraso_ms atraso_ms `(v  1 e 1 0 ]
 {
 "28
@@ -205,21 +187,4 @@
 "26
 [v atraso_ms@valor valor `ui  1 p 2 0 ]
 "43
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\exit.c
-[v _exit exit `(v  1 e 1 0 ]
-{
-[v exit@code code `i  1 p 2 2 ]
-"13
-} 0
-"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\atexit.c
-[v ___funcs_on_exit __funcs_on_exit `(v  1 e 1 0 ]
-{
-"16
-} 0
-"3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\_Exit.c
-[v __Exit _Exit `(v  1 e 1 0 ]
-{
-[v __Exit@ec ec `i  1 p 2 0 ]
-"6
 } 0

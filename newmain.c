@@ -29,7 +29,7 @@ main(void)
     /*PORTBbits.RB7 = 1;
     PORTBbits.RB4 = 1;*/
     
-    int casa = 0, visitante = 0;
+    int casa = 0x00, visitante = 0x00;
     
     //casa = rb2 visitante rb1
     //char *casa_, *visitante_;
@@ -37,55 +37,54 @@ main(void)
     lcd_init();
     lcd_cmd(L_CLR);
     
-        lcd_cmd(L_L1);
-        lcd_str("CASA: ");
-        lcd_cmd(L_L2);
-        lcd_str("VISITANTE: ");
-       
+    lcd_cmd(L_L1);
+    lcd_str("CASA: ");
+    lcd_cmd(0x86);
+    lcd_numb(casa);
+    
+    lcd_cmd(L_L2);
+    lcd_str("VISITANTE: ");     
+    lcd_cmd(0xcb);
+    lcd_numb(visitante);
+              
     while(true)
     {
-       
-        
         if(PORTBbits.RB1 == 0)
         {
             if(casa != 9)
             {   
                 casa++;
-//                *casa_ = casa+48;
-//                *visitante_ = visitante+48;
-                                
-                lcd_cmd(0x86);
-                lcd_str(name(casa));
-              
-                lcd_cmd(0xcb);
-                lcd_numb(visitante);
-            }else
-            {
-                lcd_cmd(L_CLR);                
-                lcd_str("casa vencedor"); 
-                exit(EXIT_SUCCESS);
-            }
-            
-        }
-        if(PORTBbits.RB2 == 0)
-        {
-            if(visitante != 9)
-            {   
-                visitante++;
-                                
                 lcd_cmd(0x86);
                 lcd_numb(casa);
               
                 lcd_cmd(0xcb);
                 lcd_numb(visitante);
-            }else
+            }
+            else
             {
                 lcd_cmd(L_CLR);                
-                lcd_str("visitante vencedor"); 
-                exit(EXIT_SUCCESS);
-            }
+                lcd_str("CASA VENCEU"); 
+                break;
+            }    
         }
-         
+        if(PORTBbits.RB2 == 0)
+        {
+            if(visitante != 9)
+            {   
+                visitante++;         
+                lcd_cmd(0x86);
+                lcd_numb(casa);
+              
+                lcd_cmd(0xcb);
+                lcd_numb(visitante);
+            }
+            else
+            {
+                lcd_cmd(L_CLR);                
+                lcd_str("VISITANTE VENCEU"); 
+                break;
+            }
+        }   
     }
     return 0;
 }
